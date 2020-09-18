@@ -7,4 +7,4 @@ Feature: Smart Survey page
 
   Scenario: Smart Survey at the home page
     Given that I'm on the home page and wants to give feedback
-    Then this there should be a smart survey link at the top
+    Then there should be a smart survey link at the top
