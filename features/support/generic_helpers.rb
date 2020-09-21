@@ -34,10 +34,6 @@ def challenge_decision_page
   @challenge_decision_page ||= ChallengeDecisionPage.new
 end
 
-def challenge_decision_status_page
-  @challenge_decision_status_page ||= ChallengeDecisionStatusPage.new
-end
-
 def taxpayer_details_page
   @taxpayer_details_page ||= TaxpayerDetailsPage.new
 end
