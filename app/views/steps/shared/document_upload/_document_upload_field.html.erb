@@ -1,11 +1,7 @@
 <p class="govuk-body">
   <%= form.label(field_name, label_text, id: [
-    'error', form.object.class.name.underscore.tr('/', '_'), field_name
-  ].join('_')) %>
-</p>
-
-<p class="govuk-body">
-  <%=t '.upload_explanation_html' %>
+      'error', form.object.class.name.underscore.tr('/', '_'), field_name
+  ].join('_'), for: [form.object.class.name, field_name, 'field'].join('-').underscore.dasherize.tr('/', '-')) %>
 </p>
 
 <div class="govuk-grid-row uploader-row">
@@ -16,6 +12,10 @@
     <p class="js-file-status"></p>
   </div>
 </div>
+
+<p class="govuk-body">
+  <%=t '.upload_explanation_html' %>
+</p>
 
 
 <%= render partial: 'steps/shared/file_upload_requirements' %>
